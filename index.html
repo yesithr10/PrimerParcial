@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#" onclick="showModule('registroEmpleado')">Registro de Empleados</a>
+        <a href="#" onclick="showModule('empleadosRegistrados')">Empleados Registrados</a>
+    </nav>
+
+    <!-- Módulo de Registro de Empleados -->
+    <div id="registroEmpleado" class="container">
+        <h2>Registro de Empleados</h2>
+        <form id="formRegistroEmpleado">
+            <label for="nombreEmpleado">Nombre del Empleado:</label>
+            <input type="text" id="nombreEmpleado" name="nombreEmpleado" placeholder="Ingresa el nombre del empleado" required>
+
+            <label for="cedulaEmpleado">Cédula:</label>
+            <input type="text" id="cedulaEmpleado" name="cedulaEmpleado" placeholder="Ingresa la cédula del empleado" required>
+
+            <label for="cargoEmpleado">Cargo:</label>
+            <input type="text" id="cargoEmpleado" name="cargoEmpleado" placeholder="Ingresa el cargo del empleado" required>
+
+            <label for="horaLlegada">Hora de Llegada:</label>
+            <input type="time" id="horaLlegada" name="horaLlegada" required>
+
+            <button type="submit">Registrar Empleado</button>
+        </form>
+    </div>
+
+    <!-- Módulo de Empleados Registrados -->
+    <div id="empleadosRegistrados" class="container">
+        <h2>Empleados Registrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cédula</th>
+                    <th>Cargo</th>
+                    <th>Hora de Llegada</th>
+                </tr>
+            </thead>
+            <tbody id="empleadosTabla">
+                <!-- Aquí se agregarán los empleados registrados -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
